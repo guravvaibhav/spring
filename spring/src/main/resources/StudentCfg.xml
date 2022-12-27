@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean name="add" class="com.spring.Address">
+		<constructor-arg value="416202"></constructor-arg>
+		<constructor-arg value="kolhapur"></constructor-arg>
+	</bean>
+
+	<bean name="std1" class="com.spring.Student">
+		<property name="roll" value="101"></property>
+		<property name="name" value="rushi"></property>
+		<property name="add" ref="add"></property>
+		<property name="subjects">
+			<list>
+				<value>java</value>
+				<value>cloud</value>
+			</list>
+		</property>
+		<property name="mob">
+			<set>
+				<value>1234</value>
+				<value>4321</value>
+			</set>
+		</property>
+		<property name="subMarks">
+			<map>
+				<entry key="java" value="90"></entry>
+				<entry key="cloud" value="10"></entry>
+			</map>
+		</property>
+
+	</bean>
+
+
+
+</beans>
