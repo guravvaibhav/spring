@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="add" class="com.autowire.Address">
+		<property name="pin" value="1234"></property>
+		<property name="city" value="Pune"></property>
+	</bean>
+
+
+
+	<!-- <bean name="emp" class="com.autowire.Employee" autowire="byName"> <property 
+		name="id" value="10"></property> <property name="name" value="Ram"></property> 
+		</bean> -->
+	<!-- <bean name="emp" class="com.autowire.Employee" autowire="byType"> <property 
+		name="id" value="10"></property> <property name="name" value="Ram"></property> 
+		</bean> -->
+
+	<bean name="emp" class="com.autowire.Employee"
+		autowire="constructor" lazy-init="true">
+		<constructor-arg index="0" value="10"></constructor-arg>
+		<constructor-arg index="1" value="Ram"></constructor-arg>
+
+	</bean>
+
+
+
+
+
+
+</beans>

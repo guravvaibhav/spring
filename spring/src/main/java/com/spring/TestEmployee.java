@@ -10,7 +10,8 @@ public class TestEmployee {
 		
 		ApplicationContext cxt=new ClassPathXmlApplicationContext("employee.xml");
 		Employee bean = cxt.getBean("emp1",Employee.class);
-		System.out.println(bean);
+//		bean.getProp().get("abc");
+		System.out.println(bean.getProp().get("abc"));
 	}
 
 }
