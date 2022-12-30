@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+        <bean name="add"
+		class="com.spring.mi.Address" scope="prototype">
+		<property name="pin" value="1234" />
+		<property name="city" value="Pune" />
+	</bean>
+        
+	<bean name="std"
+		class="com.spring.mi.Student">
+		<property name="roll" value="101" />
+		<property name="name" value="Ram" />
+		<lookup-method name="createAddress" bean="add"/>
+		<property name="address" ref="add" />
+	</bean>
+
+
+
+
+
+
+
+</beans>
