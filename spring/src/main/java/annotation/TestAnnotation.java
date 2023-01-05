@@ -3,6 +3,7 @@ package annotation;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.env.Environment;
 
 public class TestAnnotation {
 
@@ -12,6 +13,7 @@ public class TestAnnotation {
 		Person bean = cxt.getBean("person",Person.class);
 		System.out.println(bean);
 		cxt.registerShutdownHook();
+		
 
 	}
 

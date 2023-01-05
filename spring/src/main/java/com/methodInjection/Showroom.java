@@ -23,7 +23,7 @@ public abstract class Showroom{
 		this.id = id;
 	}
 	public Car getCar() {
-		return car;
+		return getCarBean();
 	}
 	public void setCar(Car car) {
 		this.car = car;
@@ -33,7 +33,7 @@ public abstract class Showroom{
 		return "Showroom [id=" + id + ", car=" + car + "]";
 	}
 	 
-	 public abstract Car getCarBean();
+	 public abstract Car getCarBean();								// lookup method
 	
 
 }
